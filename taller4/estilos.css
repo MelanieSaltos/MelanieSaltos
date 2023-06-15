@@ -4,30 +4,38 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr 50px / 200px 1fr;
-    grid-template-areas: "header header" "left content" "footer footer";
+    grid-template: 150px 1fr 100px / 200px 1fr 200px;
+    grid-template-areas: "left header header" "left content right" "footer footer right";
     grid-gap: 5px;
     height: 100vh;
 }
 
 .item {
-    background-color: dodgerblue;
+    background-color: rgb(10, 10, 10);
     padding: 10px;
-    border: 1px solid black;
+   /*** border: 2px solid black;***/
 }
 
 .header {
     grid-area: header;
+    background-color:orange
 }
 
 .left {
     grid-area: left;
+    background-color: rgb(155, 158, 156);
 }
 
+.right{
+    grid-area: right;
+    
+}
 .content {
     grid-area: content;
+    background-color: rgb(97, 204, 111);
 }
 
 .footer {
     grid-area: footer;
+    background-color: rgb(255, 198, 9);
 }
