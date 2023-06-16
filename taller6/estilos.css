@@ -8,10 +8,44 @@
     justify-content: center;
     align-items:center ;
     height: 100vh;
+   /*** width: 60vh;***/
+
 }
+
+
 
 .item {
     border: 3px dotted rgb(253, 49, 202);
     padding: 10px;
     margin: 10px;
+}
+
+.item1 {
+    border: 3px dotted rgb(253, 49, 202);
+    padding: 10px;
+    margin: 10px;
+    height: 100px;
+    justify-content: center;
+    align-items:center ;
+}
+
+.item2 {
+    border: 3px dotted rgb(253, 49, 202);
+    padding: 10px;
+    margin: 10px;
+    height: 150px;
+}
+.item3 {
+    border: 3px dotted rgb(253, 49, 202);
+    padding: 10px;
+    margin: 10px;
+    height: 250px;
+}
+.item4 {
+    border: 3px dotted rgb(253, 49, 202);
+    padding: 10px;
+    margin: 10px;
+    height: 280px;
+    text-align: center;
+    
 }
