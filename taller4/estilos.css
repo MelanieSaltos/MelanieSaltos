@@ -15,9 +15,17 @@
     margin: 5px;
     border: 1px solid black;
     padding: 5px;
-    
+    text-decoration: none;
 }
-
+a.menu{
+    background-color: aliceblue;
+}
+a:hover.menu{
+    background-color: rgb(209, 124, 243);
+}
+a:active.menu{
+    background-color: aquamarine;
+}
 .item {
     background-color: dodgerblue;
     padding: 10px;
@@ -36,7 +44,7 @@
 
 .content {
     grid-area: content;
-    background-color: aliceblue;
+    background-color: rgb(231, 244, 255);
 }
 
 .footer {
