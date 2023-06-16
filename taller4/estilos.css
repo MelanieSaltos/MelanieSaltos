@@ -4,38 +4,41 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr 100px / 200px 1fr 200px;
-    grid-template-areas: "left header header" "left content right" "footer footer right";
+    grid-template: 150px 1fr 50px / 200px 1fr;
+    grid-template-areas: "header header" "left content" "footer footer";
     grid-gap: 5px;
     height: 100vh;
+    
+}
+
+.menu{
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    
 }
 
 .item {
-    background-color: rgb(10, 10, 10);
+    background-color: dodgerblue;
     padding: 10px;
-   /*** border: 2px solid black;***/
+    border: 1px solid black;
 }
 
 .header {
     grid-area: header;
-    background-color:orange
 }
 
 .left {
     grid-area: left;
-    background-color: rgb(155, 158, 156);
+    display: flex;
+    flex-direction: column;
 }
 
-.right{
-    grid-area: right;
-    
-}
 .content {
     grid-area: content;
-    background-color: rgb(97, 204, 111);
+    background-color: aliceblue;
 }
 
 .footer {
     grid-area: footer;
-    background-color: rgb(255, 198, 9);
 }
