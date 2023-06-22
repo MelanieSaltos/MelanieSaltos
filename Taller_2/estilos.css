@@ -1,7 +1,7 @@
-.posicion_absoluta{
-    position: absolute;
+.posicion_relativa{
+    position:relative;
     top: 20px;
     left: 20px;
-    background-color: rgb(194, 147, 238);
+    background-color: rgb(238, 147, 238);
 
 }
