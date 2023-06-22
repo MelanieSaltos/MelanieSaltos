@@ -1,7 +1,15 @@
-.posicion_absoluta{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgb(194, 147, 238);
+img {
+    float: left;
+    width: 200px;
+    clear: both;
+    margin-bottom: 50px;
+}
 
+.PRIMER, .SEGUNDO {
+    clear: both;
+}
+
+p {
+    float: left;
+    top: 25px;
 }
