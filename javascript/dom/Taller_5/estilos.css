@@ -7,11 +7,11 @@
 }
 
 #opcion1 {
-    background-color: lightpink;
+    background-color: rgb(190, 112, 243);
     z-index: 2;
 }
 
 #opcion2 {
-    background-color: lightsalmon;
+    background-color: rgb(112, 205, 233);
     z-index: 1;
 }
