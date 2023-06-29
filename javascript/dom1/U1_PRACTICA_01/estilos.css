@@ -1,8 +1,75 @@
-#cajita{
-    border: 1px solid black;
-    background: rgb(199, 161, 250);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+* {
+    margin: 0px;
 }
-/***selector de identificador 
+
+.container {
+    display: grid;
+    grid-template: 150px 1fr 50px / 200px 1fr;
+    grid-template-areas: "header header" "left content" "footer footer";
+    grid-gap: 5px;
+    height: 100vh;
+}
+
+.item {
+    background-color: dodgerblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.header {
+    grid-area: header;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    grid-area: content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja {
+    margin: 5px;
+    padding: 5px;
+    width: 400px;
+}
+
+.label {
+    display: block;
+    width: 200px;
+    float: left;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.menu {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+}
+
+a.menu {
+    background: white;
+    text-decoration: none;
+}
+
+a:hover.menu {
+    background-color: rgb(101, 229, 227);
+}
+
+a:active.menu {
+    background-color: rgb(112, 99, 209);
+    color: #fff;
+}
