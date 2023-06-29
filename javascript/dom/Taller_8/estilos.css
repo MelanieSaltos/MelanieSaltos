@@ -1,0 +1,8 @@
+#cajita{
+    border: 1px solid black;
+    background: rgb(252, 147, 243);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+/***selector de identificador 
