@@ -1,0 +1,15 @@
+img {
+    float: left;
+    width: 200px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.PRIMER, .SEGUNDO {
+    clear: both;
+}
+
+p {
+    float: left;
+    top: 25px;
+}

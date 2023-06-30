@@ -1,0 +1,17 @@
+.opcion {
+    border: 2px solid black;
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+#opcion1 {
+    background-color: rgb(190, 112, 243);
+    z-index: 2;
+}
+
+#opcion2 {
+    background-color: rgb(112, 205, 233);
+    z-index: 1;
+}
