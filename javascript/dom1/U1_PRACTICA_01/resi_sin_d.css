@@ -82,228 +82,144 @@ a:active.menu {
 
 .cuadro{
 border: 2px solid rgb(99, 43, 6);
-width: 800px;
-height: 450px;
+display: grid;
+grid-template-columns: repeat(12, 70px);
+grid-template-rows: repeat(6, 70px);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
 }
 .caja1{
 border: 1px solid black;
 background-color: rgb(13, 253, 53);
-top: 250px ;
-left: 334px ;
-position: absolute;
-width: 70px;
-height: 70px;
+grid-area: 2 / 1 / 3 / 2; 
 }
 .caja2{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 320px ;
-    left: 334px;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 3 / 1 / 4 / 2;
 }
 .caja3{
     border: 1px solid black;
     background-color: white;
-    top: 391px ;
-    left: 334px;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 4 / 1 / 5 / 2;
 }
 .caja4{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 461px ;
-    left: 334px;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 5 / 1 / 6 / 2;  
 }
 
 .caja5{
     border: 1px solid black;
     background-color:white;
-    left: 492px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 4 / 2 / 5;
 }
 .caja6{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    left: 563px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 5 / 2 / 6;
 }
 .caja7{
     border: 1px solid black;
     background-color: white;
-    left: 633px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 6 / 2 / 7;
 }
 .caja8{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    left: 704px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 7 / 2 / 8; 
 }
 .caja9{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    left: 775px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 8 / 2 / 9;
 }
 .caja10{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    left: 845px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 1 / 9 / 2 / 10; 
 }
 
 .caja11{
     border: 1px solid black;
     background-color: white;
-    margin-top: 180px;
-    left: 500px ;
-    position: absolute;
-    width: 110px;
-    height: 120px; 
+    grid-area: 3 / 4 / 5 / 6; 
 }
 .caja12{
     border: 1px solid black;
     background-color: white;
-    margin-top: 180px;
-    left: 610px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 3 /6 / 4 / 7;
 }   
 .caja13{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    margin-top: 180px;
-    left: 680px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 3 / 7 / 4 / 8;  
 }
 .caja14{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    margin-top: 180px;
-    left: 750px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 3 / 8 / 4 / 9; 
 }
 .caja15{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    margin-top: 180px;
-    left: 820px ;
-    position: absolute;
-    width: 70px;
-    height: 70px; 
+    grid-area: 3 / 9 / 4 / 10;
 }
 
 .caja16{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 250px ;
-    left: 1064px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 2 / 12 / 3 / 13;
 }
 .caja17{
     border: 1px solid black;
     background-color:white;
-    top: 320px ;
-    left: 1064px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 3 / 12 / 4 / 13;
 }
 .caja18{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 390px ;
-    left: 1064px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 4 / 12 / 5 / 13;
 }
 .caja19{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 460px ;
-    left: 1064px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 5 / 12 / 6 / 13;
 }
 .caja20{
     border: 1px solid black;
     background-color: rgb(4, 59, 10);
-    margin-top: 425px;
-    left: 500px ;
-    position: absolute;
+    margin-top: 388px;
+    left: 750px ;
     width: 100px;
     height: 30px; 
+    position: absolute;
+}
+.caja20,.h2{
+    color: white;
 }
 .caja21{
     border: 1px solid black;
     background-color: white;
-    top: 548px ;
-    left: 650px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 6 / 5 / 7 / 6;
 }
 .caja22{
     border: 1px solid black;
     background-color: rgb(13, 253, 53);
-    top: 548px ;
-    left: 720px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 6 / 6 / 7 / 7;
 }
 .caja23{
     border: 1px solid black;
     background-color: white;
-    top: 548px ;
-    left: 790px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 6 / 7 / 7 / 8;
 }
 .caja24{
     border: 1px solid black;
     background-color: white;
-    top: 548px ;
-    left: 860px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 6 / 8 / 7 / 9;
 }
 .caja25{
     border: 1px solid black;
     background-color: white;
-    top: 548px ;
-    left: 930px ;
-    position: absolute;
-    width: 70px;
-    height: 70px;
+    grid-area: 6 / 9 / 7 / 10
 }
