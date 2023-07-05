@@ -256,11 +256,14 @@ height: 70px;
 .caja20{
     border: 1px solid black;
     background-color: rgb(4, 59, 10);
-    margin-top: 425px;
-    left: 500px ;
+    margin-top: 389px;
+    left: 410px ;
     position: absolute;
     width: 100px;
-    height: 30px; 
+    height: 30px;
+}
+.caja20,.h2{
+    color: white;
 }
 .caja21{
     border: 1px solid black;

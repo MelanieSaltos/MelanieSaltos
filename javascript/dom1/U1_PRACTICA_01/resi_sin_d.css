@@ -189,11 +189,11 @@ grid-area: 2 / 1 / 3 / 2;
 .caja20{
     border: 1px solid black;
     background-color: rgb(4, 59, 10);
-    margin-top: 388px;
-    left: 750px ;
+    margin-top: 389px;
+    left: 410px ;
+    position: absolute;
     width: 100px;
     height: 30px; 
-    position: absolute;
 }
 .caja20,.h2{
     color: white;
