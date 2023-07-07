@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.container {
+    display: grid;
+    grid-template: 30% 10% 60% / 325px 1fr 325px;
+    grid-template-areas: "header header header" "left left left" "content content content";
+    height: 100vh;
+    row-gap: 3px;
+}
+
+.header {
+    grid-area: header;
+    background-color: goldenrod;
+    border: 1px solid black;
+}
+
+.left {
+    grid-area: left;
+    background-color: gold;
+    border: 1px solid black;
+}
+
+.content {
+    grid-area: content;
+    background-color: rgba(239, 214, 102, 0.907);
+    border: 1px solid black;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.botones button {
+    margin-right: 50px;
+    padding: 10px 50px;
+    background-color: rgb(165, 145, 32);
+    color: white;
+    font-size: 18px;
+    border: 1px solid black;
+}
+#negro{
+    border: 5px solid black;
+}
+
+.libros {
+    background-color: lightgray;
+    height: 90%;
+    margin: 20px 300px 5px 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.libros h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.isbn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.anio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+label {
+    margin-right: 20px;
+    font-size: 18px;
+}
+input {
+    border: 2px solid black;
+    width: 200px;
+    padding: 5px;
+    box-shadow: black 2px 2px 6px 0px inset;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.boton button {
+    margin-right: 150px;
+    padding: 5px 20px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: black 2px 2px 6px 0px;
+}
+#cancelar {
+    background-color: red;
+}
+#continuar {
+    background-color: green;
+}
+a{
+    color: white;
+}

@@ -1,59 +1,50 @@
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    display: grid;
-    grid-template: 150px 1fr 50px / 200px 1fr;
-    grid-template-areas: "header header" "left content" "footer footer";
-    grid-gap: 5px;
-    height: 100vh;
-    
+a {    
+    text-decoration: none;
 }
 
-.menu{
+header {
     margin: 5px;
     border: 1px solid black;
     padding: 5px;
-    text-decoration: none
-    
+   
+   height: 200px;  
+   background-color: rgb(238, 160, 16);
+   grid-gap: 5px;
 }
-a.menu{
-    background-color: aliceblue;
-    box-shadow: 5px 3px 3px black;
-}
-a:hover.menu{
-    background-color: rgb(180, 45, 233);
-}
-a:active.menu{
-    background-color: aquamarine;
-}
-.item {
-    background-color: rgb(224, 55, 64);
-    padding: 10px;
+
+.main {
+    margin: 5px;
     border: 1px solid black;
+    padding: 5px;
+   height: 50px;
+  color: rgb(0, 0, 0);
+   background-color: rgb(255, 229, 81);
 }
 
-.header {
-    grid-area: header;
-    background-color: rgb(238, 160, 16);
+.sidebar {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+   height: 500px;
+  color: white;
+  background-color: rgb(250, 240, 187);
 }
 
-/**.left {
-    top: 100px;
-    width: 100px;
-    height: 20px;
-}**/
-
-.content {
-    grid-area: content;
-    background-color: rgb(250, 240, 187);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+footer {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+   height: 100px;
+   color: rgb(230, 29, 29);
+   background-color: #FFA931;
 }
+
 
 .item-form{
     width: 400px;
@@ -69,8 +60,4 @@ a:active.menu{
     text-align: right;
 
  
-}
-.footer {
-    grid-area: footer;
-    background-color: rgb(238, 160, 16);
 }
