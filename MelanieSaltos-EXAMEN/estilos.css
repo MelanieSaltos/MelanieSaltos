@@ -117,3 +117,10 @@ input {
 a{
     color: white;
 }
+.item footer{
+    
+        grid-area: footer;
+        background-color: rgb(238, 160, 16);
+
+    
+}
