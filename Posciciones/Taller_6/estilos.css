@@ -6,7 +6,7 @@ img {
 }
 
 .PRIMER, .SEGUNDO {
-    clear: both;
+    clear: right;
 }
 
 p {
