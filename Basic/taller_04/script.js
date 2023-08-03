@@ -1,46 +1,26 @@
-console.log( 1 == 1 )
-console.log( 1 == '1' )
+// Creacion de un objeto de manera estatica
+let mi_carro = {
+    marca: 'Mazda',
+    modelo: 'El mas cool',
+    anio: 2023,
+    detalle_auto: function() {
+        console.log( `Auto: ${this.marca}-${this.modelo}, Año: ${this.anio}.` )
+    }
+}
 
-console.log( 1 === 1 )
-console.log( 1 === '1' )
+console.log( mi_carro.marca )
+mi_carro.marca = 'Lamborgini'
+mi_carro.detalle_auto()
 
-console.log( 1 == true )
-console.log( 1 === true )
+// Creacion de un objeto de manera dinamica
+function carro(marca, modelo, anio) {
+    this.marca = marca
+    this.modelo = modelo
+    this.anio = anio
+    this.detalle_auto = function() {
+        console.log( `Auto: ${this.marca}-${this.modelo}, Año: ${this.anio}.` )
+    }
+}
 
-console.log( 0 == false )
-console.log( 0 === false )
-
-console.log( 0 == null )
-console.log( 0 == undefined )
-
-// null y undefined no tienen nada.
-console.log( null == undefined )
-// Aunque no hay nada, null por default se crea el tipo object; en cambio, undefined ni siquiera crea un objeto en la memoria.
-console.log( null === undefined )
-
-console.log( false == null )
-console.log( null )
-console.log( !null )
-console.log( !!null )
-
-console.log( !!null == false )
-console.log( !!null === false )
-// 0 y !undefined van a ser booleanos
-console.log( 0 == !!undefined )
-console.log( 0 === !!undefined )
-
-var obj1 = { nombre: 'Jordy' }
-var obj2 = { nombre: 'Jordy' }
-
-console.log(obj1 == obj2)
-
-console.log(obj1.nombre == obj2.nombre)
-console.log(obj2)
-
-var obj3 = obj2
-
-console.log(obj2 == obj3)
-
-obj3.nombre = 'Luis'
-
-console.log(obj2)
+let mi_auto = new carro('Ford', 'Focus', 2023)
+mi_auto.detalle_auto()
