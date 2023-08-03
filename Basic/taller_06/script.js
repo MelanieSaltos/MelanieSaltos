@@ -7,9 +7,17 @@ let articulos = [
     { nombre: 'Laptop Dell', modelo: 'Core i7 11va, 512gb ssd, 16gb, tec iluminado', costo: 1207.51 }
 ]
 
-constimprimir_articulo=(objeto)=> {
+const imprimir_articulo=(objeto)=> {
     console.log(`${objeto.nombre}-${objeto.modelo}, valor: $${objeto.costo}`)
 }
 for (let elemento of articulos){
     imprimir_articulo(elemento)
 }
+console.log('================================================')
+console.log('==========USO DEL FOREACH==========')
+console.log('================================================')
+articulos.forEach( (articulos)=>imprimir_articulo(articulos))
+
+console.log('================================================')
+console.log('==========USO DEL SOME==========')
+console.log('================================================')
