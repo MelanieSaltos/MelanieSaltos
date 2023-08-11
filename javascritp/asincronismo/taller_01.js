@@ -1,27 +1,10 @@
-class Persona {
-    constructor(nombre, apellido, altura) {
-        this.nombre = nombre
-        this.apellido = apellido
-        this.altura = altura
-    }
+console.log("Primera frase")
+setTimeout(function(){
+console.log('Segunda frase')
 
-    saludar() {
-        console.log( `Hola soy ${this.nombre} ${this.apellido}.` )
-    }
-}
+} , 1000)
+setTimeout(function(){
+console.log('Tercera frase')
 
-class Deportista extends Persona {
-    constructor(nombre, apellido) {
-        super(nombre, apellido)
-    }
-    
-    saludar() {
-        console.log( `Hola soy ${this.nombre} ${this.apellido} y soy deportista.` )
-    }
-}
-
-let persona = new Persona('Ian', 'Cordova', 1.70)
-persona.saludar()
-
-let deportista = new Deportista('Klever', 'Gonzalez')
-deportista.saludar()
+} , 2000)
+console.log('Cuarta Frase')
