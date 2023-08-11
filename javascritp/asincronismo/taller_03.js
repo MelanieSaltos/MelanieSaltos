@@ -1,6 +1,7 @@
 function saludar(nombre, fn) {
     setTimeout(function() {
         console.log(`Hola ${nombre}`)
+        fn(nombre)
     }, 1000)
 }
 
@@ -11,5 +12,5 @@ function hablar(nombre, fn) {
 }
 
 console.log('Iniciando conversacion...')
-saludar('Guillermo', hablar)
+saludar('Melanie', hablar)
 console.log('Terminando conversacion...')
