@@ -2,9 +2,9 @@ console.log("Primera frase")
 setTimeout(function(){
 console.log('Segunda frase')
 
-} , 1000)
+} , 2000)
 setTimeout(function(){
 console.log('Tercera frase')
 
-} , 2000)
+} , 1000)
 console.log('Cuarta Frase')
