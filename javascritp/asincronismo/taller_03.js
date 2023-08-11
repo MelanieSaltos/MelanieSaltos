@@ -2,7 +2,7 @@ function saludar(nombre, fn) {
     setTimeout(function() {
         console.log(`Hola ${nombre}`)
         fn(nombre)
-    }, 1000)
+    }, 3000)
 }
 
 function hablar(nombre, fn) {
