@@ -1,23 +1,32 @@
-function saludar(nombre, fn) {
+const saludar=(nombre)=>{
+return new Promise((resolve, reject) =>{
     setTimeout(function() {
         console.log(`Hola ${nombre}`)
-        fn(nombre, adios)
-    }, 3000)
+        resolve(nombre)
+    }, 1000)
+    })
 }
 
-function hablar(nombre, fn) {
-    setTimeout(function(){
-        console.log('bla, bla, bla...')
-        fn(nombre)
-    }, 1000)
-}
+const hablar=(nombre)=>{
+    return new Promise((resolve, reject) =>{
+        setTimeout(function() {
+            console.log('blah,blah, blah.......')
+            resolve(nombre)
+        }, 1000)
+        })
+    }
+    
+    const adios=(nombre)=>{
+        return new Promise((resolve, reject) =>{
+            setTimeout(function() {
+                console.log('Terminando conversacion')
+                resolve(nombre)
+            }, 1000)
+            })
+        }
 
-function adios(nombre) {
-    setTimeout(function(){
-        console.log(`Adios ${nombre}.`)
-        console.log('Terminando conversacion...')
-    }, 1000)
-}
 
 console.log('Iniciando conversacion...')
-saludar('Melanie', hablar)
+saludar('Melanie')
+.then((dato) => hablar(dato))
+.then((dato) => adios(dato))
