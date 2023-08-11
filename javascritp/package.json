@@ -1,0 +1,15 @@
+{
+  "name": "javascritp",
+  "version": "1.0.0",
+  "description": "\"Gestion del asincronismo\",",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "asynchronism",
+    "managment"
+  ],
+  "author": "Melanie Saltos",
+  "license": "GPL-3.0"
+}
