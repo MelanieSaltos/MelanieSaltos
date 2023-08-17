@@ -7,9 +7,16 @@ h1 {
 }
 
 #contenedor {
-    border: 1px solid black;
-    width: 300px;
     padding: 10px;
+    margin: 10px;
+}
+
+#contenedor div {
+    width: 300px;
+    float: left;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
 #contenedor h1 {
