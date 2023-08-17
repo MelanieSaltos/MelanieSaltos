@@ -32,32 +32,18 @@ function cargar_datos(url_api, fn) {
     xhttp.send()
 }
 
-const invocacionSincronica = function(error, data) {
+const invocacionAsincronica = function(error, data) {
     if (error)
         return console.error( error )
 
-    console.log( data.info.count )
-
-    cargar_datos( API + data.results[0].id, function(error2, data2) {
-        if (error2)
-            return console.error( error2 )
-
-        personaje( data2 )
-
-        cargar_datos( API + data.results[1].id, function(error3, data3) {
-            if (error3)
-                return console.error( error3 )
-    
-            personaje( data3 )
+    for (let i=0; i<10; i++) {
+        cargar_datos( API + data.results[i].id, function(error2, data2) {
+            if (error2)
+                return console.error( error2 )
             
-            cargar_datos( API + data.results[2].id, function(error4, data4) {
-                if (error4)
-                    return console.error( error4 )
-        
-                personaje( data4 )
-            } )    
-        } )    
-    } ) 
+            personaje(data2)
+        })
+    }
 }
 
-cargar_datos(API, invocacionSincronica)
+cargar_datos(API, invocacionAsincronica)
