@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const userData = {
             username: formData.get('username'),
             email: formData.get('email'),
-            password: formData.get('password')
+            password: formData.get('password'),
         };
         
         try {
