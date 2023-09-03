@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Configura MongoDB
-mongoose.connect('mongodb+srv://melanie:12345@cluster0.qgyrcfv.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://melanie:bartolo2003@cluster0.hszw1vp.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -53,6 +53,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('Servidor en funcionamiento en el puerto 3000');
+app.listen(3002, () => {
+    console.log('Servidor en funcionamiento en el puerto 3002');
 });
