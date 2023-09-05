@@ -23,7 +23,7 @@ app.post('/register', async (req, res) => {
         res.status(200).send('Usuario registrado correctamente');
     } catch (error) {
         console.error(error);
-        res.status(500).send('Error en el registro');
+        res.status(500).send('Error  INTEen el registro');
     }
 });
 

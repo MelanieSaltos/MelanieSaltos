@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             console.error(error);
-            alert('Error en el registro');
+            alert(' OTRO Error en el registro');
         }
     });
 });
