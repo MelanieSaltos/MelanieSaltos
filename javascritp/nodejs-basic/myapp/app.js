@@ -1,53 +1,58 @@
-// app.js (o el nombre de tu archivo principal de Node.js)
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000; // Elige el puerto que desees
+const port = process.env.PORT || 3000;
 
-// Configura la conexión a MongoDB
+// Conectar a MongoDB Atlas ( 'URL_MongoDB_Atlas'  URL real1)
 mongoose.connect('mongodb+srv://melanie:bartolo2003@cluster0.hszw1vp.mongodb.net/?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
+
 const db = mongoose.connection;
 
 db.on('error', (error) => {
-  console.error('Error de conexión a MongoDB', error);
+  console.error('Error de conexión a MongoDB:', error);
 });
 
 db.once('open', () => {
-  console.log('Conexión exitosa a MongoDB ');
+  console.log('Conexión exitosa a MongoDB Atlas');
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-const User = mongoose.model('User', {
-    name: String,
-    email: String,
-    password: String,
+// Definir el modelo de datos para la colección "usuarios"
+const UsuarioSchema = new mongoose.Schema({
+  nombreUsuario: String,
+  contrasena: String,
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+const UsuarioModel = mongoose.model('Usuario', UsuarioSchema);
 
-// Ruta para el registro de usuarios
-app.post('/registro', async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
+// Ruta para mostrar el formulario de inicio de sesión
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
 
-        // Crea un nuevo usuario y guárdalo en la base de datos
-        const user = new User({ name, email, password });
-        await user.save();
+// Ruta para manejar el envío del formulario de inicio de sesión
+app.post('/login', async (req, res) => {
+  const { nombreUsuario, contrasena } = req.body;
 
-        res.send('Registro exitoso.');
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Error en el registro.');
-    }
+  try {
+    // Crear un nuevo documento de usuario y guardarlo en la colección "usuarios"
+    const nuevoUsuario = new UsuarioModel({ nombreUsuario, contrasena });
+    await nuevoUsuario.save();
+
+    res.send('Datos de inicio de sesión guardados en la base de datos.');
+  } catch (error) {
+    console.error('Error al guardar datos:', error);
+    res.status(500).send('Error interno del servidor');
+  }
 });
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${port}`);
+  console.log(`Servidor escuchando en el puerto ${port}`);
 });
