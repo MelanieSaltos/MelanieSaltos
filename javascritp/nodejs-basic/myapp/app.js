@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Conectar a MongoDB Atlas ( 'URL_MongoDB_Atlas'  URL real1)
 mongoose.connect('mongodb+srv://melanie:bartolo2003@cluster0.hszw1vp.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -18,35 +17,33 @@ db.on('error', (error) => {
 });
 
 db.once('open', () => {
-  console.log('Conexión exitosa a MongoDB Atlas');
+  console.log('Conexión exitosa a MongoDB ');
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Definir el modelo de datos para la colección "usuarios"
 const UsuarioSchema = new mongoose.Schema({
-  nombreUsuario: String,
-  contrasena: String,
+  name: String,
+  email: String,
+  password:String,
 });
 
-const UsuarioModel = mongoose.model('Usuario', UsuarioSchema);
+const UserModel = mongoose.model('Usuario', UsuarioSchema);
 
-// Ruta para mostrar el formulario de inicio de sesión
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-// Ruta para manejar el envío del formulario de inicio de sesión
 app.post('/login', async (req, res) => {
-  const { nombreUsuario, contrasena } = req.body;
+  const { name, email, password } = req.body;
 
   try {
     // Crear un nuevo documento de usuario y guardarlo en la colección "usuarios"
-    const nuevoUsuario = new UsuarioModel({ nombreUsuario, contrasena });
+    const nuevoUsuario = new UserModel({ name, email, password });
     await nuevoUsuario.save();
 
-    res.send('Datos de inicio de sesión guardados en la base de datos.');
+    res.send('Datos de inicio de sesión enviados');
   } catch (error) {
     console.error('Error al guardar datos:', error);
     res.status(500).send('Error interno del servidor');
